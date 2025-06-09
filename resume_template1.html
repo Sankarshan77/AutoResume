@@ -1,0 +1,110 @@
+<!-- templates/resume_template1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .sidebar {
+            background-color: #0f172a;
+            color: white;
+            width: 35%;
+            padding: 30px;
+            text-align: center;
+        }
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+        .sidebar h2 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .section {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .section h3 {
+            color: #a3e635;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 5px;
+        }
+        .main {
+            padding: 30px;
+            width: 65%;
+        }
+        .main h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #1e293b;
+        }
+        .main h2 {
+            color: #64748b;
+            margin: 0;
+            font-weight: normal;
+        }
+        .main .line {
+            margin: 20px 0;
+            border-top: 1px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="{{ photo_url }}">
+        <h2>{{ name }}</h2>
+        <p>{{ role }}</p>
+
+        <div class="section">
+            <h3>Contact</h3>
+            <p>{{ phone }}</p>
+            <p>{{ email }}</p>
+            <p>{{ address }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <p>{{ education }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <p>{{ skills }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Languages</h3>
+            <p>{{ languages }}</p>
+        </div>
+    </div>
+    <div class="main">
+        <h1>{{ name }}</h1>
+        <h2>{{ role }}</h2>
+        <div class="line"></div>
+
+        <div>
+            <h3>Profile</h3>
+            <p>{{ summary }}</p>
+        </div>
+
+        <div>
+            <h3>Work Experience</h3>
+            <p>{{ experience }}</p>
+        </div>
+
+        <div>
+            <h3>References</h3>
+            <p>{{ references }}</p>
+        </div>
+    </div>
+</body>
+</html>
